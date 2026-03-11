@@ -15,7 +15,7 @@ function Admincart(){
     const [cartdata,setCartdata]=useState([])
     
    useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/cart/getdata/").then(
+        axios.get("https://backhand-suzf.onrender.com/cart/getdata/").then(
             (res)=>{
                 console.log(res.data)
                 setHost(res.data)

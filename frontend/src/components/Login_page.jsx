@@ -18,7 +18,7 @@ function Login_page(){
    let userid=""
 
   const userlogin = () => {
-  const url = "http://127.0.0.1:8000/user/postdata/";
+  const url = "https://backhand-suzf.onrender.com/user/postdata/";
 
   const input_data = {
     username: usernameref.current.value,
@@ -33,7 +33,7 @@ function Login_page(){
 
       const userid = res.data.id;   
 
-      const carturl = "http://127.0.0.1:8000/cart/cartdata/";
+      const carturl = "https://backhand-suzf.onrender.com/cart/cartdata/";
 
       const cartdata = {
         user: userid,
@@ -55,7 +55,7 @@ function Login_page(){
 
 
    const adminlogin=()=>{
-    const url1="http://127.0.0.1:8000/owner/login/";
+    const url1="https://backhand-suzf.onrender.com/owner/login/";
     const input_data1={
         username:adminnameref.current.value,
         password:adminpassref.current.value

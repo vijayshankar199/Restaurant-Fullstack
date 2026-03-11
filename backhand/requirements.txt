@@ -10,9 +10,9 @@ mysqlclient==2.2.7
 requests==2.32.5
 python-dateutil==2.9.0.post0
 pytz==2025.2
+
 psycopg2-binary
 dj-database-url
-
 numpy==2.2.0
 pandas==2.2.3
 

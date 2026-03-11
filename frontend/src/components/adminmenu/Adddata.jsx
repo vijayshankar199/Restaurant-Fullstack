@@ -16,7 +16,7 @@ function Adddata(){
     const nav=useNavigate()
 
     const add=()=>{
-        const url="http://127.0.0.1:8000/owner/menu/postdata/";
+        const url="https://backhand-suzf.onrender.com/owner/menu/postdata/";
         const input_data={
             name:nameref.current.value,
             category:cateref.current.value,

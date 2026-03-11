@@ -97,13 +97,17 @@ WSGI_APPLICATION = 'backhand.wsgi.application'
 
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 DATABASES = {
-    "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'marketpulse_setsseedas',
+        'PASSWORD':'Vijay@123',
+        'USER':"marketpulse_setsseedas",  
+        'HOST':'k1j1s8.h.filess.io',
+        'PORT':'3307',
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
