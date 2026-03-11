@@ -8,3 +8,4 @@ class user(models.Model):
     mobile_no=models.CharField(max_length=15)
     email=models.CharField(max_length=40)
     date=models.DateField(default=timezone.now)
+

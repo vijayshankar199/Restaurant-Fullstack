@@ -14,3 +14,4 @@ class menu(models.Model):
     category=models.CharField(max_length=10)
     price=models.IntegerField()
     
+
