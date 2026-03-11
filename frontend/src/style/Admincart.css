@@ -1,0 +1,142 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= PAGE ================= */
+.cart-page {
+  height: 100vh;                 /* full screen */
+  position: relative;
+
+  background: url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d")
+    no-repeat center center/cover;
+
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* DARK OVERLAY */
+.cart-page::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ================= COMMON SECTION STYLE ================= */
+.cart-section,
+.total-section {
+  position: relative;
+  z-index: 2;
+
+  flex: 1;                         /* equal width */
+  height: 100%;                    /* full height */
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+}
+
+/* ================= SCROLL AREA ================= */
+.cart-section table,
+.total-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* wrapper scroll */
+.cart-section,
+.total-section {
+  overflow: hidden; /* prevent outside scroll */
+}
+
+.cart-section tbody,
+.total-section tbody {
+  display: block;
+  overflow-y: auto;
+  height: calc(100vh - 140px);   /* vertical scroll height */
+}
+
+/* Keep header fixed */
+.cart-section thead,
+.total-section thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.cart-section tbody tr,
+.total-section tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* ================= TABLE STYLE ================= */
+th {
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  background: rgba(255,255,255,0.15);
+}
+
+td {
+  padding: 12px;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+tbody tr:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ================= DELETE BUTTON ================= */
+button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+  color: white;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .cart-page {
+    flex-direction: column;
+  }
+
+  .cart-section,
+  .total-section {
+    height: 50%;
+  }
+
+  .cart-section tbody,
+  .total-section tbody {
+    height: calc(50vh - 120px);
+  }
+}

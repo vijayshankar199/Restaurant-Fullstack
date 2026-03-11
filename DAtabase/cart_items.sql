@@ -1,0 +1,1 @@
+SELECT * FROM restaurent.cart_cartitem;

@@ -1,0 +1,116 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= PAGE BACKGROUND ================= */
+.modify-page {
+  min-height: 100vh;
+  position: relative;
+
+  background: url("https://images.unsplash.com/photo-1498654896293-37aacf113fd9")
+    no-repeat center center/cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* DARK OVERLAY */
+.modify-page::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ================= CARD ================= */
+.modify-card {
+  width: 420px;
+  padding: 45px;
+  border-radius: 20px;
+
+  background: rgba(0, 150, 255, 0.08); /* blue tint */
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+  color: white;
+  text-align: center;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ================= TITLE ================= */
+.modify-card h1 {
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #4db8ff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* ================= LABELS ================= */
+.modify-card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 8px;
+  text-align: left;
+}
+
+/* ================= INPUTS ================= */
+.modify-card input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+}
+
+.modify-card input:focus {
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.6);
+}
+
+/* ================= UPDATE BUTTON ================= */
+.modify-card button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  background: linear-gradient(45deg, #2196f3, #00bcd4);
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.modify-card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .modify-card {
+    width: 95%;
+    padding: 30px;
+  }
+}
