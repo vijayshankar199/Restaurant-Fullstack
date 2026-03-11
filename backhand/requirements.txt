@@ -16,6 +16,8 @@ dj-database-url
 numpy==2.2.0
 pandas==2.2.3
 
+whitenoise
+
 google-generativeai==0.8.6
 
 beautifulsoup4==4.13.4
