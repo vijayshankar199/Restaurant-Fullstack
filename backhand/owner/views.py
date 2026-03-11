@@ -16,12 +16,15 @@ class Getdata(APIView):
 
     
 class Postdata(APIView):
-    def post (self,request):
-        e_obj=request.data
-        s_obj=ownerser(data=e_obj)
+    def post(self, request):
+        s_obj = ownerser(data=request.data)
+        print(request.data)
+
         if s_obj.is_valid():
             s_obj.save()
-            return Response(s_obj.data,status=HTTP_201_CREATED)
+            return Response(s_obj.data, status=HTTP_201_CREATED)
+
+        return Response(s_obj.errors, status=400)
         
 
 class Menu_Getdata(APIView):
