@@ -16,7 +16,7 @@ function Moditydata(){
     const priceref=useRef()
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/owner/menu/updatedata/"+id+"/").then(
+        axios.get("https://backhand-suzf.onrender.com/owner/menu/updatedata/"+id+"/").then(
             (res)=>{
                 console.log(res.data)
                 nameref.current.value=res.data.name,

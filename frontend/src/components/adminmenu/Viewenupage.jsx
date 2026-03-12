@@ -19,7 +19,7 @@ function Viewmenupage(){
     let [menu,setMenu]=useState([]);
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/user/menu/getdata/").then(
+        axios.get("https://backhand-suzf.onrender.com/user/menu/getdata/").then(
             (res)=>{
                 console.log(res.data)
                 setMenu(res.data)

@@ -16,7 +16,7 @@ function Deletedata(){
     const priceref=useRef()
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/owner/menu/deletedata/"+id+"/").then(
+        axios.get("https://backhand-suzf.onrender.com/owner/menu/deletedata/"+id+"/").then(
             (res)=>{
                 console.log(res.data)
                 nameref.current.value=res.data.name,
@@ -31,7 +31,7 @@ function Deletedata(){
     },[])
 
     const deletedata=()=>{
-        const url="http://127.0.0.1:8000/owner/menu/deletedata/"+id+"/"
+        const url="https://backhand-suzf.onrender.com/owner/menu/deletedata/"+id+"/"
         const input_data={
             name:nameref.current.value,
             category:catref.current.value,

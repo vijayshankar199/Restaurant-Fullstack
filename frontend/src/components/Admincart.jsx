@@ -28,7 +28,7 @@ function Admincart(){
     },[])
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/cart/cartdata/").then(
+        axios.get("https://backhand-suzf.onrender.com/cart/cartdata/").then(
         (res)=>{
             // console.log(res.data);
             setCartdata(res.data)
@@ -41,7 +41,7 @@ function Admincart(){
 
     },[])
     const deleteitem=(id)=>{
-        axios.delete("http://127.0.0.1:8000/cart/deletedata/"+id+"/").then(
+        axios.delete("https://backhand-suzf.onrender.com/cart/deletedata/"+id+"/").then(
             (res)=>{
                 console.log(res.data)
             }
@@ -53,7 +53,7 @@ function Admincart(){
 
     }
     const Deletedata=(id)=>{
-        axios.delete("http://127.0.0.1:8000/cart/usercartdelete/"+id+"/").then(
+        axios.delete("https://backhand-suzf.onrender.com/cart/usercartdelete/"+id+"/").then(
             (res)=>{
                 console.log(res.data)
             }

@@ -19,7 +19,7 @@ function Menupage(){
     let [menu,setMenu]=useState([]);
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/user/menu/getdata/").then(
+        axios.get("https://backhand-suzf.onrender.com/user/menu/getdata/").then(
             (res)=>{
                 console.log(res.data)
                 setMenu(res.data)
@@ -37,7 +37,7 @@ function Menupage(){
       // const cartid = localStorage.getItem("cartid")
 
       console.log(data)
-      const url="http://127.0.0.1:8000/cart/postdata/"
+      const url="https://backhand-suzf.onrender.com/cart/postdata/"
       const input_data={
         "cart": parseInt(cartid), 
         "menu": id,

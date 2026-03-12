@@ -11,7 +11,7 @@ function Usercart(){
     const [cartdata,setCartdata]=useState([])
     const [total,setTotal]=useState([])
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/cart/usercartitem/"+cartid).then(
+        axios.get("https://backhand-suzf.onrender.com/cart/usercartitem/"+cartid).then(
             (res)=>{
                 console.log(res.data)
                 setCartdata(res.data)
@@ -25,7 +25,7 @@ function Usercart(){
 
     )
     useEffect(()=>{
-        axios.get("http://127.0.0.1:8000/cart/usercart/"+cartid).then(
+        axios.get("https://backhand-suzf.onrender.com/cart/usercart/"+cartid).then(
             (res)=>{
                 console.log(res.data)
                 setTotal(res.data)
@@ -39,7 +39,7 @@ function Usercart(){
 
     )
     const deleteitem=(id)=>{
-        axios.delete("http://127.0.0.1:8000/cart/deletedata/"+id+"/").then(
+        axios.delete("https://backhand-suzf.onrender.com/cart/deletedata/"+id+"/").then(
             (res)=>{
 
                 console.log(res.data)
