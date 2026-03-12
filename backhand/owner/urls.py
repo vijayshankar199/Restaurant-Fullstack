@@ -10,5 +10,6 @@ urlpatterns = [
     path("menu/postdata/",views.Menu_Postdata.as_view(),name="menu_postdata"),
     path("menu/updatedata/<int:id>/",views.Menu_Updatedata.as_view(),name="menu_updatedata"),
     path("menu/deletedata/<int:id>/",views.Menu_Deletedata.as_view(),name="menu_deletedata"),
-    path('login/',TokenObtainPairView.as_view()),
+    path("login/",views.Login.as_view()),
+    # path('login/',TokenObtainPairView.as_view()),
 ]

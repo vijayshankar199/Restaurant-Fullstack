@@ -25,7 +25,24 @@ class Postdata(APIView):
             return Response(s_obj.data, status=HTTP_201_CREATED)
 
         return Response(s_obj.errors, status=400)
-        
+    
+class Login(APIView):
+    def post(self, request):
+        username = request.data.get("username")
+        password = request.data.get("password")
+
+        user = owner.objects.filter(username=username, password=password).first()
+
+        if user:
+            users = owner.objects.all()
+            serializer = ownerser(users, many=True)
+
+            return Response({
+                "msg": "Admin login success",
+                "users": serializer.data
+            })
+        else:
+            return Response({"msg": "Invalid admin"}, status=401)
 
 class Menu_Getdata(APIView):
     def get(self,request):
